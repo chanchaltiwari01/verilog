@@ -10,7 +10,7 @@ module tb;
 
   or_gate dut(.a(a),
               .b(b),
-              .c(C) );
+              .c(c) );
   initial begin
     $monitor("[%0t] : a=%0d , b=%0d, c=%0d",$time,a,b,c);
     for(int i=0 ; i<4 ; i=i+1) begin
