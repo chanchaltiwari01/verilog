@@ -11,6 +11,7 @@ module tb;
               .b(b),
               .c(C) );
   initial begin
+    $monitor("[%0t] : a=%0d , b=%0d, c=%0d",$time,a,b,c);
     for(int i=0 ; i<4 ; i=i+1) begin
       {a,b} = i ;
       #10 ;
