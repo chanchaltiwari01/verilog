@@ -1,7 +1,11 @@
 module and_gate (c,a,b);
 input a,b;
 output c;
-and (c,a,b);
+and a1(c,a,b);
+  //assign c = a & b ;
+  /* always@* begin
+  c = a & b ;
+  end */
 endmodule
 
 module tb ;
