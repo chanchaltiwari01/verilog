@@ -1,6 +1,7 @@
 module or_gate (input a ,b,
                 output c );
   assign c  = a | b ;
+  //or o1(c,a,b);
 endmodule 
 
 module tb; 
