@@ -6,7 +6,7 @@ module nets_data_type ;
   assign  #3 {a,b} = 2'b01 ; 
 
   initial begin
-    $display("a=%0b, b=%0b",a,b);
+    $monitor("a=%0b, b=%0b",a,b);
   end 
   
 endmodule 
