@@ -1,12 +1,17 @@
 module nets_data_type ;
   wire a, b ;
+  reg [1:0] c ;
   
-  assign  #1 {a,b} = 2'b01 ; 
-  assign  #2 {a,b} = 2'b10 ; 
-  assign  #3 {a,b} = 2'b01 ; 
-
   initial begin
-    $monitor("a=%0b, b=%0b",a,b);
+    #10 c = 2'b01;
+    #10 c = 2'b10;
+  end 
+  
+  assign {a,b} = c ;
+    
+
+  always@* begin
+    $display("a=%0b, b=%0b",a,b);
   end 
   
 endmodule 
