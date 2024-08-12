@@ -8,7 +8,7 @@ module nets_data_type ;
   end 
   
   assign {a,b} = c ;
-    //default value X
+    //default value Z
 
   always@* begin
     $display("a=%0b, b=%0b",a,b);
