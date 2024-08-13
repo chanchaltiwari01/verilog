@@ -22,8 +22,9 @@ module top_d_latch ;
   initial begin
     en=0; d=1 ;
     #10 en = 1 ;
-    d=0; 
+    #10 d=0; 
     #10 d=1;
+    #10 en=0;
   end 
 
   initial begin
