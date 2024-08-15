@@ -31,3 +31,25 @@ end
 */
   
 endmodule 
+
+module test_mux ;
+  reg in0,in1,sel;
+  wire out ;
+
+  mux_2x1 dut(.in1(in1),.in0(in0),.sel(sel),.out(out));
+
+  initial begin
+    sel =0 ; in1 =1 ; in0=0; #10 ;
+    sel =1 ; in1 =0 ; in0=1; #10 ;
+    sel =1 ; in1 =0 ; in0=1; #10 ;
+    sel =0 ; in1 =1 ; in0=0; #10 ;
+  end 
+
+  initial begin
+    $dumpfile("mux.vcd");
+    $dumpvars(1);
+    $monitor("sel=%0b,in0=%0b,in1=%0b,out=%0b",sel,in0,in1,out);
+  end 
+endmodule 
+
+    
