@@ -15,7 +15,7 @@ module tb_mux;
   wire out;
 
   
-  mux_16x1 #(.n(4)) dut(.in(in), .sel(sel), .out(out));
+  mux_16x1 #(.n(n)) dut(.in(in), .sel(sel), .out(out));
 
   
   initial begin
